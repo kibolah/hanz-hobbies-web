@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Hanz Hobbies</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: #0f0f11; color: #ffffff; display: flex; align-items: center; justify-content: center; height: 100vh; overflow: hidden; }
+        .portal-container { text-align: center; max-width: 900px; padding: 20px; }
+        .logo { font-size: 2.5em; font-weight: 800; letter-spacing: 3px; margin-bottom: 5px; }
+        .logo span { color: #ef4444; }
+        .subtitle { color: #a1a1aa; letter-spacing: 5px; font-size: 0.9em; font-weight: 600; margin-bottom: 50px; text-transform: uppercase; }
+        .cards-wrapper { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+        .pov-card { background-color: #18181b; border: 1px solid #27272a; border-radius: 12px; padding: 40px 30px; width: 320px; transition: 0.3s; display: flex; flex-direction: column; align-items: center; text-decoration: none; color: inherit; }
+        .pov-card:hover { transform: translateY(-10px); border-color: #ef4444; box-shadow: 0 10px 30px -10px rgba(239, 68, 68, 0.2); }
+        .icon { background-color: #0f0f11; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; border: 1px solid #27272a; transition: 0.3s; }
+        .icon svg { width: 35px; height: 35px; fill: currentColor; }
+        .pov-card:hover .icon { color: #ef4444; border-color: #ef4444; }
+        .pov-title { font-size: 1.3em; font-weight: 700; margin-bottom: 10px; }
+        .pov-desc { font-size: 0.9em; color: #a1a1aa; line-height: 1.5; margin-bottom: 25px; }
+        .btn { background-color: #27272a; color: white; padding: 10px 25px; border-radius: 6px; font-weight: 600; font-size: 0.9em; letter-spacing: 1px; transition: 0.2s; text-transform: uppercase; }
+        .pov-card:hover .btn { background-color: #ef4444; }
+    </style>
+</head>
+<body>
+    <div class="portal-container">
+        <div class="logo">HANZ <span>HOBBIES</span></div>
+        <div class="subtitle">Select Your Point of View</div>
+        <div class="cards-wrapper">
+            <a href="/customer/shop/" class="pov-card">
+                <div class="icon"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg></div>
+                <div class="pov-title">Customer POV</div>
+                <div class="pov-desc">Browse the catalog, search items, and experience the shop as a buyer.</div>
+                <div class="btn">Enter Shop</div>
+            </a>
+            <a href="/admin/" class="pov-card">
+                <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg></div>
+                <div class="pov-title">Admin POV</div>
+                <div class="pov-desc">Manage store inventory, track customer orders, and view revenue stats.</div>
+                <div class="btn">Enter Workspace</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

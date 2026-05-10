@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog | Hanz Hobbies</title>
+    <link rel="stylesheet" href="../../src/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container"><a href="/" class="logo">HANZ <span>HOBBIES</span></a><div class="logo-sub">& DIECAST</div></div>
+        <nav class="desktop-nav"><a href="/about/">About Us</a><a href="#location">Location</a><a href="#contact">Contact Us</a></nav>
+        <button class="burger-btn" id="burger-btn"><svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
+        <nav class="mobile-nav" id="mobile-nav"><a href="/about/">About Us</a><a href="#location">Location</a><a href="#contact">Contact Us</a></nav>
+    </header>
+
+    <div class="hero"><h1>Premium 1:64 Scale Models</h1><p>Curated JDM, Euro, and Custom Liveries.</p><a href="#shop" class="btn-action">SHOP NOW</a></div>
+
+    <div class="filter-container" id="shop">
+        <button class="btn-toggle-filter" id="btn-filter">Filter & Sort</button>
+        <div class="filter-panel" id="filter-panel">
+            <div class="filter-group"><label>Manufacturer</label><select id="filter-brand"><option value="All">All Makers</option><option value="Mini GT">Mini GT</option><option value="Inno64">Inno64</option><option value="Tarmac Works">Tarmac Works</option><option value="Hot Wheels">Hot Wheels</option></select></div>
+            <div class="filter-group"><label>Car Brand</label><select id="filter-car-maker"><option value="All">All Brands</option><option value="Nissan">Nissan</option><option value="Honda">Honda</option><option value="Porsche">Porsche</option><option value="Toyota">Toyota</option><option value="Mitsubishi">Mitsubishi</option></select></div>
+            <div class="filter-group"><label>Collection</label><select id="filter-collection"><option value="All">All Collections</option><option value="We Recommend">We Recommend</option><option value="New Arrivals">New Arrivals</option></select></div>
+            <div class="filter-group"><label>Sort By</label><select id="sort-by"><option value="default">Default</option><option value="price-asc">Price: Low to High</option><option value="price-desc">Price: High to Low</option><option value="name-asc">Name: A-Z</option><option value="name-desc">Name: Z-A</option></select></div>
+        </div>
+    </div>
+    
+    <div class="section-title">Catalog (50 Items)</div>
+
+    <div class="grid" id="product-grid"></div>
+
+    <div class="store-pagination">
+        <div class="page-info" id="page-info">0 items found</div>
+        <div class="page-numbers" id="pagination-controls"></div>
+    </div>
+
+    <div class="quick-links-bar">
+        <a href="/customer/search/" class="quick-link-item"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>Search Products</span></a>
+        <a href="#" class="quick-link-item"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>My Account</span></a>
+        <a href="#" class="quick-link-item"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg><span>Track Orders</span></a>
+        <a href="#" class="quick-link-item"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg><span>Favorites</span></a>
+        <a href="#" class="quick-link-item"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span>Shopping Bag</span></a>
+    </div>
+
+    <div class="currency-selector">
+        <label for="currency-shop">Display prices in: </label>
+        <select id="currency-shop" class="currency-dropdown">
+            <option value="IDR">IDR (Indonesian Rupiah)</option>
+            <option value="USD">USD (US Dollar)</option>
+            <option value="EUR">EUR (Euro)</option>
+            <option value="JPY">JPY (Japanese Yen)</option>
+            <option value="MYR">MYR (Malaysian Ringgit)</option>
+            <option value="SGD">SGD (Singapore Dollar)</option>
+            <option value="GBP">GBP (British Pound)</option>
+            <option value="AUD">AUD (Australian Dollar)</option>
+        </select>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-connect">
+            <h4>Connect with us</h4>
+            <div class="social-links">
+                <a href="#"><svg viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg> Facebook</a>
+                <a href="#"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> @hanzhobbies</a>
+            </div>
+        </div>
+        <div class="footer-bottom"><div class="copyright">© Hanz Hobbies & Diecast</div></div>
+    </footer>
+    <a href="#" class="floating-chat"><svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.26c0 2.936 1.543 5.517 3.914 7.152v3.314l3.585-1.971c.813.232 1.666.357 2.501.357 5.523 0 10-4.145 10-9.26C22 6.145 17.523 2 12 2zm1.096 12.563l-2.812-2.998-5.485 2.998 6.035-6.402 2.868 2.998 5.43-2.998-6.036 6.402z"/></svg></a>
+
+    <script type="module" src="../../src/main.js"></script>
+</body>
+</html>
